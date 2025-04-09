@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: auto;
+}
+
+main{
+    background-color: #F1DABB;
+}
+header{
+    background-color: #9E6B49;
+}
+
+h2,label, p{
+    font-family: "Raleway";
+}
+
+
+
+h1{
+    font-family: "Playfair";
+    font-style: bold;
+    color: #FFFF;
+}
+
+div{
+    padding: 0.5em 0.5em;
+}

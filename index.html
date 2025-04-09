@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Royalty Vragenlijst</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="antwoord.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Cooking Royalty Vragenlijst</h1>
+    </header>
+    <main>
+        <form id="vragenlijst">
+            <div></div>
+            <h2>Wat wil je koken?</h2>
+            <label><input type="radio" name="keuzeRecept" value="ontbijt"> Ontbijt</label><br>
+            <label><input type="radio" name="keuzeRecept" value="lunch"> Lunch</label><br>
+            <label><input type="radio" name="keuzeRecept" value="avondeten"> Avondeten</label><br>
+            <div></div>
+
+            <h2>Hoe voel je je vandaag?</h2>
+            <label><input type="radio" name="keuzeStemming" value="gestrest"> Gestrest/Overprikkeld</label><br>
+            <label><input type="radio" name="keuzeStemming" value="moe"> Moe</label><br>
+            <label><input type="radio" name="keuzeStemming" value="neutraal"> Neutraal</label><br>
+            <label><input type="radio" name="keuzeStemming" value="ontspannen"> Ontspannen</label><br>
+            <label><input type="radio" name="keuzeStemming" value="energiek"> Energiek</label><br>
+            <div></div>
+
+            <h2>Hoeveel energie heb je op dit moment?</h2>
+            <label><input type="radio" name="keuzeEnergie" value="geenEnergie"> Geen energie</label><br>
+            <label><input type="radio" name="keuzeEnergie" value="weinigEnergie"> Weinig energie</label><br>
+            <label><input type="radio" name="keuzeEnergie" value="normaal"> Normaal</label><br>
+            <label><input type="radio" name="keuzeEnergie" value="veelEnergie"> Veel energie</label><br>
+            <div></div>
+
+            <h2>Wat voor een recept wil je maken?</h2>
+            <label><input type="radio" name="keuzeMoeilijkheid" value="simpelRecept"> Simpel recept</label><br>
+            <label><input type="radio" name="keuzeMoeilijkheid" value="eenvoudigRecept"> Eenvoudig recept</label><br>
+            <label><input type="radio" name="keuzeMoeilijkheid" value="uitgebreidRecept"> Uitgebreid recept</label><br>
+            <div>
+
+            </div>
+
+            <h2>Hoe lang wil je bezig zijn met het recept?</h2>
+            <label><input type="radio" name="keuzeTijd" value="min20"> 20 Minuten</label><br>
+            <label><input type="radio" name="keuzeTijd" value="min30"> 20-45 Minuten</label><br>
+            <label><input type="radio" name="keuzeTijd" value="min40"> Meer dan 45 Minuten</label><br>
+
+            <div>
+                <input type="reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <div>
+
+        </div>
+
+        <div id="resultaat"></div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>
