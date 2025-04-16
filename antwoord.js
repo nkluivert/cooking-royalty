@@ -26,28 +26,38 @@ document.getElementById("vragenlijst").addEventListener("submit", function (even
     // Recept aanbevelingen op basis van antwoorden
     let aanbevolenRecept = "";
 
-    if (keuzeRecept === "ontbijt" && keuzeEnergie === "geenEnergie" && keuzeTijd === "20min") {
-        aanbevolenRecept = "Oatmeal , kaasbroodjes";
-    } else if (keuzeRecept === "ontbijt" && keuzeMoeilijkheid === "eenvoudigRecept" && keuzeTijd === "30min") {
-        aanbevolenRecept = "American Pancakes";
-    } else if (keuzeRecept === "ontbijt" && keuzeTijd === "min40" && keuzeMoeilijkheid === "uitgebreidRecept") {
-        aanbevolenRecept = "Bananen brood";
-    }
+    // Specifieke combinaties
+    if (
+        keuzeRecept === "ontbijt" && keuzeEnergie === "geenEnergie" && keuzeTijd === "20min"
+    ) {
+        aanbevolenRecept = "Oatmeal, Kaasbroodjes";
+    } else if (keuzeRecept === "lunch" && keuzeEnergie === "geenEnergie" && keuzeTijd === "20min" && keuzeMoeilijkheid === "simpelRecept") {
+        aanbevolenRecept = "BLT sandwich, Broodje caprese";
 
-    if (keuzeRecept === "lunch" && keuzeEnergie === "geenEnergie" && keuzeTijd === "20min" && keuzeMoeilijkheid=== "simpelRecept") {
-        aanbevolenRecept = "De Blt, Broodje caprese";
     } else if (keuzeRecept === "lunch" && keuzeMoeilijkheid === "eenvoudigRecept" && keuzeTijd === "20min") {
-        aanbevolenRecept = "Tomatensoep, Libanese manakish";
-    }
+        aanbevolenRecept = "Bowl of goodness, Libanese manakish";
 
-    if (keuzeRecept === "avondeten" && keuzeEnergie === "geenEnergie" && keuzeTijd === "20min" && keuzeMoeilijkheid === "simpelRecept") {
-        aanbevolenRecept = "Quesedilla";
+    } else if (keuzeRecept === "avondeten" && keuzeEnergie === "geenEnergie" && keuzeTijd === "20min" && keuzeMoeilijkheid === "simpelRecept") {
+        aanbevolenRecept = "Quesadilla";
+
     } else if (keuzeRecept === "avondeten" && keuzeMoeilijkheid === "eenvoudigRecept" && keuzeTijd === "30min" && keuzeEnergie === "normaal") {
-        aanbevolenRecept = "Hamburger met friet, Pasta bolognese ";
-    } else if (keuzeRecept === "avondeten" && keuzeTijd === "min40" && keuzeEnergie ==="veelEnergie") {
+        aanbevolenRecept = "Noodles met een nootje, Pasta bolognese";
+
+    } else if (keuzeRecept === "avondeten" && keuzeTijd === "min40" && keuzeEnergie === "veelEnergie") {
         aanbevolenRecept = "Chinese fried rice";
     }
 
+    // Losse voorkeuren (fallback)
+    else if (keuzeRecept === "ontbijt") {
+        aanbevolenRecept = "Oatmeal, De vroege vogelwrap";
+    } else if (keuzeRecept === "lunch") {
+        aanbevolenRecept = "Bowl of goodness, Broodje caprese";
+    } else if (keuzeRecept === "avondeten") {
+        aanbevolenRecept = "Quesadilla, Noedels met een nootje";
+    }
+
+
+    console.log("Aanbevolen recept:", aanbevolenRecept);
     // Laat resulaat zien van vragenlijst
     resultaat.textContent = `👉 Aanbevolen recept: ${aanbevolenRecept}`;
 });
